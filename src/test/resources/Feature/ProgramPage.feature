@@ -13,16 +13,29 @@ Feature: Manage program Validation
     And the sorticon check box and searchbox should be validated
     And Add New program
 
+  Scenario Outline: Data Table
+    Given Admins clicks on the addprogram
+    When Enter "<program_name>" and "<program_descrp>"
+
+    Examples: 
+      | program_name           | program_descrp |
+      |                        |                |
+      | Team19 Selenium Surfer | Future Course  |
+      | Team19Selenium Hacks   | Future Study   |
+      | Team19Selenium Hackers | Happy Learning |
+      | 12qw                   | qwerty         |
+      | Team19                 | 12qwewe        |
+
   Scenario: Validating Edit functionality
     Given Admin is in Program Page
     When Admin clicks Edit button
     When Admin updates with data
     Then Admin should see Updated message.
 
-Scenario: Validating Delete Functionality row level delete and alert options
-    When Admin clicks the delete icon on a specific program row alert with 'yes' and 'no' appears clicks yes for deletion 
-    Then success message apears 
-    When Admin clicks the delete icon on specific program row alert with yes and no appears clicks "No" 
+  Scenario: Validating Delete Functionality row level delete and alert options
+    When Admin clicks the delete icon on a specific program row alert with 'yes' and 'no' appears clicks yes for deletion
+    Then success message apears
+    When Admin clicks the delete icon on specific program row alert with yes and no appears clicks "No"
     Then program should still be listed in the data table
 
   Scenario: Validate the delete functionality with multiple selections

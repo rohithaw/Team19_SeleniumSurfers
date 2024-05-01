@@ -80,9 +80,34 @@ public void add_new_program() throws InterruptedException {
 	programpage.newprogramicon();
 	
 	programpage.validateprogrampopup();
-	programpage.addprogram();
+   // programpage.addprogram();
 	//programpage.Alertmessage();
     }
+//-----------------ADD WITH DATA TABLE--------------------
+/*@Given("Admins is on login page")
+public void admins_is_on_login_page() {
+	programpage = new  ProgramPage(driver);
+    
+}
+
+@When("Admins enters the {string} and {string}")
+public void admins_enters_the_and(String string, String string2) {
+	programpage.login("sdetorganizers@gmail.com", "UIHackathon@02");
+	programpage.navigateToProgramPage();
+
+}*/
+
+@Given("Admins clicks on the addprogram")
+public void admins_clicks_on_the_login() throws InterruptedException {
+	programpage.navigateToProgramPage();
+	//programpage.addprogram();
+	
+}
+@When("Enter {string} and {string}")
+public void enter_and(String string, String string2) throws InterruptedException {
+    programpage.addprogramtable(string, string2);
+}
+
 //----------------------------Edit---------------------------------------------------------------
 @Given("Admin is in Program Page")
 public void admin_is_in_program_pae() {
@@ -124,9 +149,9 @@ public void admin_clicks_the_delete_icon_on_specific_program_row_alert_with_yes_
 @Then("program should still be listed in the data table")
 public void program_should_still_be_listed_in_the_data_table() {
     }
-
+//---------------single and multiple delete
 @When("Admin selects one program row and clicks the delete icon under the {string} header")
-public void admin_selects_one_program_row_and_clicks_the_delete_icon_under_the_header(String string) {
+public void admin_selects_one_program8_row_and_clicks_the_delete_icon_under_the_header(String string) {
     }
 
 @Then("selected program row is deleted from the data table")
@@ -134,7 +159,10 @@ public void selected_program_row_is_deleted_from_the_data_table() {
     }
 
 @When("Admin selects multiple program rows and clicks the delete icon under the {string} header")
-public void admin_selects_multiple_program_rows_and_clicks_the_delete_icon_under_the_header(String string) {
+public void admin_selects_multiple_program_rows_and_clicks_the_delete_icon_under_the_header(String string) throws InterruptedException {
+	programpage.searchtxtdisplayed();
+	programpage.multipledelete();
+	Thread.sleep(2000);
     }
 
 @Then("selected program rows are deleted from the data table")

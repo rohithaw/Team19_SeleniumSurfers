@@ -7,7 +7,7 @@ package pageObject;
 	import java.time.Duration;
 	import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 	import java.util.NoSuchElementException;
 
 	import org.openqa.selenium.Alert;
@@ -186,7 +186,7 @@ import org.openqa.selenium.WebDriver;
 			
 			public void searchtxtdisplayed() {
 				
-				driver.findElement(searchbar).sendKeys("Gen"+Keys.ENTER);
+				driver.findElement(searchbar).sendKeys("Team19"+Keys.ENTER);
 				//String Value = SearchtxtValue.getText();     ////*[contains(text(),'GenAI')
 				//Assert.assertEquals("Search Match", "Selenium Surefers testing", Value);	
 				
@@ -240,8 +240,7 @@ import org.openqa.selenium.WebDriver;
 				
 					Thread.sleep(3000);
 					}
-
-		   
+	   
 		    public void addprogram() throws InterruptedException {
 		    	driver.findElement(newprogrambutton).click();
 				driver.findElement(nameTextBox).sendKeys("CyPress");		
@@ -290,38 +289,48 @@ import org.openqa.selenium.WebDriver;
 		    	driver.findElement(Delete).click();
 		    	driver.findElement(ConfirmNo).click();
 		    }
-		 /*   public void multipleDeleteAction() {
-			    // Finds all rows.
-			    List<WebElement> rows = driver.findElements(rowlocator);
-			    
-			
-			    boolean isAnyCheckboxSelected = false;
+		    
+		    public void multipledelete() {
+		    	List<WebElement>rows=driver.findElements(rowlocator);
+		    	boolean ischeckboxselected=false;
+		    	for(WebElement row:rows) {
+		    		WebElement checboxIcon=row.findElement(checkbox);
+		    	checboxIcon.click();
+		    	ischeckboxselected=true;
+		    	}
+		    	if(ischeckboxselected) {
+		    		
+		    		WebElement deletebutton= new WebDriverWait(driver,Duration.ofSeconds(10))
+		    									.until(ExpectedConditions.elementToBeClickable(multipleDeleteButton));
+		    		deletebutton.click();
+		    		WebElement yesButton= new WebDriverWait(driver, Duration.ofSeconds(10))
+		    								.until(ExpectedConditions.elementToBeClickable(ConfirmYes));
+		    		yesButton.click();
+		    		System.out.println("Multiple delete performed & Confirmed");
+		    	}
+		    	else {
+		    		System.out.println("No Checkboxes selected");
+		    	}
+		    		
+		    	}
+		    
+		    		   /* public void singleDelete() {
+		    	List<WebElement> rows=driver.findElements(rowlocator);
+		    	if(!rows.isEmpty()) {
+		    		WebElement firstcheckbox=rows.get(0).findElement(checkbox);
+		    		if(firstcheckbox.isEnabled()&&firstcheckbox.isDisplayed()) {
+		    			firstcheckbox.click();
+		    		}
+		    		else {
+		    			System.out.println("Checkbox is not clickable");
+		    			return;
+		    		}
+		    		//delete first row
+		    		WebElement firstdeletebutton=rows.get(0).findElement(Delete);
+		    		if firstdeletebutton.isEnabled()&&firstdeletebutton.isDisplayed()){
+		    			
+		    		}*/
 
-			  
-			    for (WebElement row : rows) {
-			        WebElement checkboxsel = row.findElement(checkbox);
-			        checkboxsel.click();
-			        isAnyCheckboxSelected = true;
-			    }
-
-			    if (isAnyCheckboxSelected) {
-			        // Wait for the delete button to become clickable after checkboxes are selected.
-			        WebElement deleteButton = new  WebDriverWait(driver, Duration.ofSeconds(10))
-			                                  .until(ExpectedConditions.elementToBeClickable(multipleDeleteButton));
-			        
-			        deleteButton.click();
-
-			        // Confirm the delete action in the popup.
-			        WebElement yesButton = new   WebDriverWait(driver, Duration.ofSeconds(10))
-			                               .until(ExpectedConditions.elementToBeClickable(ConfirmYes));
-			        yesButton.click();
-
-			        System.out.println("Multiple delete performed and confirmed.");
-			    } 
-			    else { 
-			        System.out.println("No checkboxes were selected.");
-			    }
-		    }*/
 		    
 		   public void Alertmessage() {
 				WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
