@@ -18,7 +18,7 @@ import pageObject.UserStudentstaffPage;
 		 ProgramPage programpage;
 		 LoginPage lp;
 		 DashboardPageObj dashboard;
-		 UserStudentstaffPage userssp;
+		 // UserStudentstaffPage userssp;
 		 
 		public TestContext() {
 	        this.batchPage = new BatchPage(DriverFactory.getDriver());
@@ -26,7 +26,7 @@ import pageObject.UserStudentstaffPage;
 	        this.lp = new LoginPage(DriverFactory.getDriver());
 	        this.programpage = new ProgramPage(DriverFactory.getDriver());
 	        this.dashboard = new DashboardPageObj(DriverFactory.getDriver());
-	        this.userssp = new UserStudentstaffPage(DriverFactory.getDriver());
+	        // this.userssp = new UserStudentstaffPage(DriverFactory.getDriver());
 	    }
 		
 		public WebDriver getDriver() {
@@ -56,8 +56,8 @@ import pageObject.UserStudentstaffPage;
 	       
 	    }
 	    
-	    public UserStudentstaffPage getUserStudentstaffPage() {
-	        return this.userssp;
-	    }
+	    // public UserStudentstaffPage getUserStudentstaffPage() {
+	    //     return this.userssp;
+	    // }
 	    
 	}
