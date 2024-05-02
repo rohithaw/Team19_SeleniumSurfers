@@ -8,6 +8,7 @@ import pageObject.LoginPage;
 import pageObject.ProgramPage;
 import pageObject.UserManagePage;
 // import pageObject.UserStudentstaffPage;
+import pageObject.UserStudentstaffPage;
 
 	public class TestContext {
 
@@ -18,7 +19,7 @@ import pageObject.UserManagePage;
 		 ProgramPage programpage;
 		 LoginPage lp;
 		 DashboardPageObj dashboard;
-		 // UserStudentstaffPage userssp;
+		 UserStudentstaffPage userssp;
 		 
 		public TestContext() {
 	        this.batchPage = new BatchPage(DriverFactory.getDriver());
@@ -56,8 +57,8 @@ import pageObject.UserManagePage;
 	       
 	    }
 	    
-	    // public UserStudentstaffPage getUserStudentstaffPage() {
-	    //     return this.userssp;
-	    // }
+	     public UserStudentstaffPage getUserStudentstaffPage() {
+	         return this.userssp;
+	     }
 	    
 	}
