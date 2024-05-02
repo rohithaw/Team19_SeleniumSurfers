@@ -647,6 +647,7 @@ public class BatchPage extends DriverFactory{
 			   
 			   WebElement NoofclassesField = driver.findElement(noofclasses);
 			   NoofclassesField.clear();
+			   wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
 		        clickSave();
 		        System.out.println("Mandatory field error message: " + noofclasseserror());
 		    }

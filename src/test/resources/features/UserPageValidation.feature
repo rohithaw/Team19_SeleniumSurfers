@@ -33,7 +33,7 @@ Feature: User Page validation
     When Admin clicks on submit button without entering data
     Then user willnot be created and Admin gets error message
 
-  Scenario: 
+  Scenario: Validate create user entering data
     Given Admin click +A New User button
     When Admin clicks Cancel Icon on User Details form
     Then User Details popup window should be closed without saving
