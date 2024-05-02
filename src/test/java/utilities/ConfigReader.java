@@ -1,6 +1,7 @@
 package utilities;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -11,7 +12,7 @@ public class ConfigReader {
 	
 	
 	private static Properties properties;
-	private static final String propertyFilePath = "src/test/resources/configs/Configuration.properties";
+	private static final String propertyFilePath = "/Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/testData/config.properties";
 
 	public static void loadProperty() 
 	{
@@ -56,4 +57,5 @@ public class ConfigReader {
 	
 	
 }
+	
 

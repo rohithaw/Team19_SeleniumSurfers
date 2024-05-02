@@ -8,18 +8,19 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-		plugin = {"pretty","html:target/cucumberreport.html",
-				"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+		plugin = {"pretty","html:target/Cucumber-Reports/Team19-SeleniumSurfers.html",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+				"json:target/Cucumber-Reports/dsAlgo.json" , 
+				"junit:target/Cucumber-Reports/dsAlgo.xml",},
 				
 				
-		features="src/test/resources/features",
-		glue="stepDefinition",
+		features={"src/test/resources/features"},
+		glue={"stepDefinition","hooks"},
 		dryRun=false,
 		monochrome=true,
 		publish=true
-		
-		
+			
 		
 		)
 
