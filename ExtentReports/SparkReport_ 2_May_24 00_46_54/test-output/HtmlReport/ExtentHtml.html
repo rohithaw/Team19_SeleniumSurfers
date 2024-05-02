@@ -1,0 +1,2847 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>May 2, 2024 12:46:54 AM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@LMSModule</a></li>
+					<li><a href='#'>@tag6</a></li>
+					<li><a href='#'>@UserModule</a></li>
+					<li><a href='#'>@tag3</a></li>
+					<li><a href='#'>@tag1</a></li>
+					<li><a href='#'>@tag4</a></li>
+					<li><a href='#'>@tag2</a></li>
+					<li><a href='#'>@tag5</a></li>
+					<li><a href='#'>@tag7</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    5</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='82%'>
+                    <span class='strong'>34</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='17%'>
+                    7</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='94%'>
+                    <span class='strong'>201</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='3%'>
+                    7</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='1%'>
+                    4</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Batch Management</span>
+						<span class='test-time'>May 2, 2024 12:46:55 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 00 25.036</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate header,data table header, footer, pagination, and default state of delete button in the Batch Page</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag1</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='4' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</div>
+
+
+		</li>
+		<li test-id='5' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</div>
+
+
+		</li>
+		<li test-id='6' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_should_see_in_the_header_and_the_total_number_of_records_in_the_footer(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see 'Manage Batch' in the header and the total number of records in the footer in the Batch Page</div>
+
+
+		</li>
+		<li test-id='7' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.the_data_table_should_show_headers(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the data table should show headers "Batch name", "Batch Description", "Batch Status", "No. of classes", "Program Name", "Edit/Delete"</div>
+
+
+		</li>
+		<li test-id='8' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_should_see_pagination_controls_under_the_data_table_and_the_multipedelete_button_should_be_disabled())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin should see pagination controls under the data table and the multipedelete button should be disabled</div>
+
+
+		</li>
+		<li test-id='9' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.the_checkbox_edit_delete_icons_for_each_row_should_be_enabled())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the checkbox edit ,delete icons for each row should be enabled</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='11' status='pass'>
+
+	<span class='duration right label'>00 03 59.939</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Comprehensive validation and submission of the new batch form in the popup</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>Batch Name</td><td>Description</td><td>Status</td><td>No of Classes</td><td>Program Name</td><td>Outcome</td></tr><tr><td></td><td>SDET</td><td>ACTIVE</td><td>34</td><td>JAVA</td><td>"Batch Name is required."</td></tr><tr><td>B01</td><td>SDET</td><td>ACTIVE</td><td></td><td>PYTHON</td><td>"Number of Classes is required."</td></tr><tr><td>B02</td><td>SDET</td><td>ACTIVE</td><td>88</td><td></td><td>"Program Name is required."</td></tr><tr><td>B09</td><td></td><td>ACTIVE</td><td>44</td><td>JAVA</td><td>"Batch Description is required."</td></tr><tr><td>B01</td><td>SDET</td><td>ACTIVE</td><td>56</td><td>PLAYWRIGHT</td><td>"Batch already exists with given Batch Name"</td></tr><tr><td>B09</td><td>SDET</td><td></td><td>10</td><td>playwright</td><td>"status is required"</td></tr><tr><td>SURFER</td><td>SDET</td><td>ACTIVE</td><td>6</td><td>SELENIUM</td><td>"Successfully batch created"</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='12' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Comprehensive validation and submission of the new batch form in the popup</div>
+
+				<div class='category-list'>
+						<span class='category label'>@tag2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='14' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</h6>
+
+				</li>
+				<li test-id='15' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</h6>
+
+				</li>
+				<li test-id='16' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_clicks_on_button_to_open_the_batch_details_popup_with_all_necessary_fields(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks on "+ A New Batch" button to open the Batch details popup with all necessary fields</h6>
+
+				</li>
+				<li test-id='17' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_attempts_to_enter_and_in_the_popup_and_clicks(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin attempts to enter "", "SDET", "ACTIVE", "34", and "JAVA" in the popup and clicks "save"</h6>
+
+				</li>
+				<li test-id='18' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_should_see_valid_inputs_or_error_messages_corresponding_to_each_field_in_the_popup()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see valid inputs or error messages corresponding to each field in the popup</h6>
+
+				</li>
+				<li test-id='19' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.the_outcome_should_be_batch_name_is_required_this_field_should_start(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the outcome should be ""Batch Name is required.""</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='21' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Comprehensive validation and submission of the new batch form in the popup</div>
+
+				<div class='category-list'>
+						<span class='category label'>@tag2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='23' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</h6>
+
+				</li>
+				<li test-id='24' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</h6>
+
+				</li>
+				<li test-id='25' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_clicks_on_button_to_open_the_batch_details_popup_with_all_necessary_fields(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks on "+ A New Batch" button to open the Batch details popup with all necessary fields</h6>
+
+				</li>
+				<li test-id='26' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_attempts_to_enter_and_in_the_popup_and_clicks(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin attempts to enter "B01", "SDET", "ACTIVE", "", and "PYTHON" in the popup and clicks "save"</h6>
+
+				</li>
+				<li test-id='27' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_should_see_valid_inputs_or_error_messages_corresponding_to_each_field_in_the_popup()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see valid inputs or error messages corresponding to each field in the popup</h6>
+
+				</li>
+				<li test-id='28' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.the_outcome_should_be_number_of_classes_is_required(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the outcome should be ""Number of Classes is required.""</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='30' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Comprehensive validation and submission of the new batch form in the popup</div>
+
+				<div class='category-list'>
+						<span class='category label'>@tag2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='32' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</h6>
+
+				</li>
+				<li test-id='33' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</h6>
+
+				</li>
+				<li test-id='34' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_clicks_on_button_to_open_the_batch_details_popup_with_all_necessary_fields(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks on "+ A New Batch" button to open the Batch details popup with all necessary fields</h6>
+
+				</li>
+				<li test-id='35' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_attempts_to_enter_and_in_the_popup_and_clicks(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin attempts to enter "B02", "SDET", "ACTIVE", "88", and "" in the popup and clicks "save"</h6>
+
+				</li>
+				<li test-id='36' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_should_see_valid_inputs_or_error_messages_corresponding_to_each_field_in_the_popup()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see valid inputs or error messages corresponding to each field in the popup</h6>
+
+				</li>
+				<li test-id='37' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.the_outcome_should_be_program_name_is_required(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the outcome should be ""Program Name is required.""</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='39' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Comprehensive validation and submission of the new batch form in the popup</div>
+
+				<div class='category-list'>
+						<span class='category label'>@tag2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='41' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</h6>
+
+				</li>
+				<li test-id='42' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</h6>
+
+				</li>
+				<li test-id='43' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_clicks_on_button_to_open_the_batch_details_popup_with_all_necessary_fields(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks on "+ A New Batch" button to open the Batch details popup with all necessary fields</h6>
+
+				</li>
+				<li test-id='44' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_attempts_to_enter_and_in_the_popup_and_clicks(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin attempts to enter "B09", "", "ACTIVE", "44", and "JAVA" in the popup and clicks "save"</h6>
+
+				</li>
+				<li test-id='45' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_should_see_valid_inputs_or_error_messages_corresponding_to_each_field_in_the_popup()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see valid inputs or error messages corresponding to each field in the popup</h6>
+
+				</li>
+				<li test-id='46' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.the_outcome_should_be_batch_description_is_required_this_field_should_start(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the outcome should be ""Batch Description is required.""</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='48' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Comprehensive validation and submission of the new batch form in the popup</div>
+
+				<div class='category-list'>
+						<span class='category label'>@tag2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='50' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</h6>
+
+				</li>
+				<li test-id='51' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</h6>
+
+				</li>
+				<li test-id='52' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_clicks_on_button_to_open_the_batch_details_popup_with_all_necessary_fields(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks on "+ A New Batch" button to open the Batch details popup with all necessary fields</h6>
+
+				</li>
+				<li test-id='53' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_attempts_to_enter_and_in_the_popup_and_clicks(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin attempts to enter "B01", "SDET", "ACTIVE", "56", and "PLAYWRIGHT" in the popup and clicks "save"</h6>
+
+				</li>
+				<li test-id='54' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_should_see_valid_inputs_or_error_messages_corresponding_to_each_field_in_the_popup()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see valid inputs or error messages corresponding to each field in the popup</h6>
+
+				</li>
+				<li test-id='55' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.the_outcome_should_be_batch_already_exists_with_given_batch_name()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the outcome should be ""Batch already exists with given Batch Name""</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='57' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Comprehensive validation and submission of the new batch form in the popup</div>
+
+				<div class='category-list'>
+						<span class='category label'>@tag2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='59' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</h6>
+
+				</li>
+				<li test-id='60' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</h6>
+
+				</li>
+				<li test-id='61' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_clicks_on_button_to_open_the_batch_details_popup_with_all_necessary_fields(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks on "+ A New Batch" button to open the Batch details popup with all necessary fields</h6>
+
+				</li>
+				<li test-id='62' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_attempts_to_enter_and_in_the_popup_and_clicks(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin attempts to enter "B09", "SDET", "", "10", and "playwright" in the popup and clicks "save"</h6>
+
+				</li>
+				<li test-id='63' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_should_see_valid_inputs_or_error_messages_corresponding_to_each_field_in_the_popup()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see valid inputs or error messages corresponding to each field in the popup</h6>
+
+				</li>
+				<li test-id='64' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.the_outcome_should_be_status_is_required()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the outcome should be ""status is required""</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='66' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Comprehensive validation and submission of the new batch form in the popup</div>
+
+				<div class='category-list'>
+						<span class='category label'>@tag2</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='68' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</h6>
+
+				</li>
+				<li test-id='69' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</h6>
+
+				</li>
+				<li test-id='70' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_clicks_on_button_to_open_the_batch_details_popup_with_all_necessary_fields(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks on "+ A New Batch" button to open the Batch details popup with all necessary fields</h6>
+
+				</li>
+				<li test-id='71' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_attempts_to_enter_and_in_the_popup_and_clicks(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin attempts to enter "SURFER", "SDET", "ACTIVE", "6", and "SELENIUM" in the popup and clicks "save"</h6>
+
+				</li>
+				<li test-id='72' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.admin_should_see_valid_inputs_or_error_messages_corresponding_to_each_field_in_the_popup()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see valid inputs or error messages corresponding to each field in the popup</h6>
+
+				</li>
+				<li test-id='73' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.BatchSteps.the_outcome_should_be_successfully_batch_created1()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the outcome should be ""Successfully batch created""</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='75' status='fail'>
+
+	<span class='duration right label'>00 00 45.193</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validate row-level editicon</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag3</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='77' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</div>
+
+
+		</li>
+		<li test-id='78' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</div>
+
+
+		</li>
+		<li test-id='79' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_clicks_the_edit_icon_on_a_specific_batch_row_and_batch_details_popup_appears())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the edit icon on a specific batch row and batch details popup appears</div>
+
+
+		</li>
+		<li test-id='80' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_clicks_and_the_successfully_batch_updated_is_displayed(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin clicks "save"  and the successfully batch updated is displayed</div>
+
+
+		</li>
+		<li test-id='81' class='node when Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_erase_the_mandatory_field_error_message_appear())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Admin erase the mandatory field  error message appear</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="text-danger"]"}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c2151dec251fa95d28874c411c4b66ca, findElement {using=xpath, value=//*[@id="text-danger"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/g0/62b0kvjj04b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50945/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2151dec251fa95d28874c411c4b66ca
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at pageObject.BatchPage.noofclasseserror(BatchPage.java:439)
+	at pageObject.BatchPage.clearMandatoryField(BatchPage.java:651)
+	at stepDefinition.BatchSteps.admin_erase_the_mandatory_field_error_message_appear(BatchSteps.java:186)
+	at ✽.Admin erase the mandatory field  error message appear(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/BatchPage.feature:34)
+</textarea>
+		</li>
+		<li test-id='82' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_tries_erase_description_field_which_is_optional_error_message_appears())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Admin tries erase description field which is optional error message appears</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='84' status='pass'>
+
+	<span class='duration right label'>00 00 37.766</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate row-level delete and alert options</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag4</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='86' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</div>
+
+
+		</li>
+		<li test-id='87' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</div>
+
+
+		</li>
+		<li test-id='88' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_clicks_the_delete_icon_on_a_specific_batch_row_alert_with_and_appears_and_validating_and_clicks_yes(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the delete icon on a specific batch row alert with 'yes' and 'no' appears and validating and clicks yes</div>
+
+
+		</li>
+		<li test-id='89' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.success_message_apears())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then success message apears</div>
+
+
+		</li>
+		<li test-id='90' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_clicks_the_delete_icon_on_specific_row_alert_with_yes_and_no_appears_clicks(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the delete icon on specific row alert with yes and no appears clicks "No"</div>
+
+
+		</li>
+		<li test-id='91' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.batch_should_still_be_listed_in_the_data_table())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then batch should still be listed in the data table</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='93' status='pass'>
+
+	<span class='duration right label'>00 00 48.403</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate the delete functionality with multiple selections</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag5</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='95' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_is_logged_into_the_lms_portal_and_on_the_dashboard_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal and on the dashboard page</div>
+
+
+		</li>
+		<li test-id='96' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_navigates_to_the_page_from_the_navigation_bar_clicking(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin navigates to the 'Batch' page from the navigation bar clicking "Batch icon"</div>
+
+
+		</li>
+		<li test-id='97' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_selects_one_batch_row_and_clicks_the_delete_icon_under_the_header(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin selects one batch row and clicks the delete icon under the "Manage Batch" header</div>
+
+
+		</li>
+		<li test-id='98' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.selected_batch_row_is_deleted_from_the_data_table())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then selected batch row is deleted from the data table</div>
+
+
+		</li>
+		<li test-id='99' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.admin_selects_multiple_batch_rows_and_clicks_the_delete_icon_under_the_header(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin selects multiple batch rows and clicks the delete icon under the "Manage Batch" header</div>
+
+
+		</li>
+		<li test-id='100' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.BatchSteps.selected_batch_rows_are_deleted_from_the_data_table())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then selected batch rows are deleted from the data table</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='102'>
+					<div class='test-heading'>
+						<span class='test-name'>Dashboard Page</span>
+						<span class='test-time'>May 2, 2024 12:53:31 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='103' status='pass'>
+
+	<span class='duration right label'>00 00 19.586</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify after login  admin lands on manage program as dashboard page</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag1</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='105' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_starts_from_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin starts from Home Page</div>
+
+
+		</li>
+		<li test-id='106' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_enters_valid_credentials_and_click_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enters valid credentials and click login button</div>
+
+
+		</li>
+		<li test-id='107' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_see_manage_program_as_header())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see manage program as header</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='109' status='pass'>
+
+	<span class='duration right label'>00 00 19.328</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify LMS title</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='111' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_starts_from_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin starts from Home Page</div>
+
+
+		</li>
+		<li test-id='112' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_enters_valid_credentials_and_click_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enters valid credentials and click login button</div>
+
+
+		</li>
+		<li test-id='113' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_see_lms_learning_management_system_as_title())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see LMS -Learning management system  as title</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='115' status='fail'>
+
+	<span class='duration right label'>00 00 19.209</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verify  LMS title alignment</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag3</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='117' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_starts_from_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin starts from Home Page</div>
+
+
+		</li>
+		<li test-id='118' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_enters_valid_credentials_and_click_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enters valid credentials and click login button</div>
+
+
+		</li>
+		<li test-id='119' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.lms_title_should_be_on_the_top_left_corner_of_page())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then LMS title should be on the top left corner of page</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: expected [top left] but found [start]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at pageObject.DashboardPageObj.LMS_TitleAlignment(DashboardPageObj.java:87)
+	at stepDefinition.DashboardStepDef.lms_title_should_be_on_the_top_left_corner_of_page(DashboardStepDef.java:67)
+	at ✽.LMS title should be on the top left corner of page(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/Dashboard.feature:21)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='121' status='pass'>
+
+	<span class='duration right label'>00 00 17.774</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate navigation bar by order</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag4</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='123' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_starts_from_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin starts from Home Page</div>
+
+
+		</li>
+		<li test-id='124' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_enters_valid_credentials_and_click_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enters valid credentials and click login button</div>
+
+
+		</li>
+		<li test-id='125' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_see_program_in_the_1st_place())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see program in the 1st place</div>
+
+
+		</li>
+		<li test-id='126' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_see_batch_in_the_2nd_place())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin should see batch in the 2nd place</div>
+
+
+		</li>
+		<li test-id='127' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_see_user_in_the_3rd_place())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin should see user in the  3rd place</div>
+
+
+		</li>
+		<li test-id='128' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_see_logout_in_the_4th_place())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin should see logout in the 4th place</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='130' status='fail'>
+
+	<span class='duration right label'>00 00 20.116</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validate navigation bar text and allignment</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag5</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='132' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_starts_from_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin starts from Home Page</div>
+
+
+		</li>
+		<li test-id='133' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_enters_valid_credentials_and_click_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enters valid credentials and click login button</div>
+
+
+		</li>
+		<li test-id='134' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_see_correct_spelling_in_navigation_bar_text())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see correct spelling in navigation bar text</div>
+
+
+		</li>
+		<li test-id='135' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_see_correct_spelling_and_space_in_lms_title())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin should see correct spelling and space in LMS title</div>
+
+
+		</li>
+		<li test-id='136' class='node and Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_see_the_navigation_bar_text_on_the_top_right_side())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And Admin should see the navigation bar text on the top right side</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: expected [right] but found [center]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at pageObject.DashboardPageObj.navigation_Bartext_Topright(DashboardPageObj.java:250)
+	at stepDefinition.DashboardStepDef.admin_should_see_the_navigation_bar_text_on_the_top_right_side(DashboardStepDef.java:125)
+	at ✽.Admin should see the navigation bar text on the top right side(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/Dashboard.feature:38)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='138' status='pass'>
+
+	<span class='duration right label'>00 00 19.262</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify the response time</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag6</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='140' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_starts_from_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin starts from Home Page</div>
+
+
+		</li>
+		<li test-id='141' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_enters_valid_credentials_and_click_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enters valid credentials and click login button</div>
+
+
+		</li>
+		<li test-id='142' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.maximum_navigation_time_in_milliseconds_defaults_to_seconds(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Maximum navigation time in milliseconds, defaults to 30 seconds</div>
+
+
+		</li>
+		<li test-id='143' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.http_response_then_the_link_is_broken(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And HTTP response >= 400. Then the link is broken</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='145' status='pass'>
+
+	<span class='duration right label'>00 00 19.964</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify Logout button function</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@tag7</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='147' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_starts_from_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin starts from Home Page</div>
+
+
+		</li>
+		<li test-id='148' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_enters_valid_credentials_and_click_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin enters valid credentials and click login button</div>
+
+
+		</li>
+		<li test-id='149' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_click_logout_button_on_navigation_bar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin click Logout button on navigation bar</div>
+
+
+		</li>
+		<li test-id='150' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.DashboardStepDef.admin_should_land_on_login_in_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should land on login in page</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='152'>
+					<div class='test-heading'>
+						<span class='test-name'>Login page validation</span>
+						<span class='test-time'>May 2, 2024 12:55:47 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario outline node' test-id='153' status='pass'>
+
+	<span class='duration right label'>00 01 01.792</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validating Login process for User with valid data</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>SheetName</td><td>Rownumber</td><td>Message</td></tr><tr><td>LoginPage</td><td>0</td><td>Login Successful</td></tr><tr><td>LoginPage</td><td>1</td><td>User</td></tr><tr><td>LoginPage</td><td>2</td><td>Pasword</td></tr><tr><td>LoginPage</td><td>3</td><td>Invalid Username and Password</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='154' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validating Login process for User with valid data</div>
+
+				<div class='category-list'>
+						<span class='category label'>@LMSModule</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='156' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on login page</h6>
+
+				</li>
+				<li test-id='157' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_clicks_on_login_button_with_entering_valid_username_and_rownumber(java.lang.String,java.lang.Integer)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks on Login button with entering valid Username "LoginPage" and rownumber 0</h6>
+
+				</li>
+				<li test-id='158' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_click_submit_and_display(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User click submit and display "Login Successful"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='160' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validating Login process for User with valid data</div>
+
+				<div class='category-list'>
+						<span class='category label'>@LMSModule</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='162' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on login page</h6>
+
+				</li>
+				<li test-id='163' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_clicks_on_login_button_with_entering_valid_username_and_rownumber(java.lang.String,java.lang.Integer)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks on Login button with entering valid Username "LoginPage" and rownumber 1</h6>
+
+				</li>
+				<li test-id='164' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_click_submit_and_display(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User click submit and display "User"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='166' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validating Login process for User with valid data</div>
+
+				<div class='category-list'>
+						<span class='category label'>@LMSModule</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='168' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on login page</h6>
+
+				</li>
+				<li test-id='169' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_clicks_on_login_button_with_entering_valid_username_and_rownumber(java.lang.String,java.lang.Integer)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks on Login button with entering valid Username "LoginPage" and rownumber 2</h6>
+
+				</li>
+				<li test-id='170' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_click_submit_and_display(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User click submit and display "Pasword"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='172' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Validating Login process for User with valid data</div>
+
+				<div class='category-list'>
+						<span class='category label'>@LMSModule</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='174' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on login page</h6>
+
+				</li>
+				<li test-id='175' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_clicks_on_login_button_with_entering_valid_username_and_rownumber(java.lang.String,java.lang.Integer)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks on Login button with entering valid Username "LoginPage" and rownumber 3</h6>
+
+				</li>
+				<li test-id='176' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.LoginPageStepDef.user_click_submit_and_display(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User click submit and display "Invalid Username and Password"</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='178' status='pass'>
+
+	<span class='duration right label'>00 00 13.518</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify text field is present</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@LMSModule</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='180' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.LoginPageStepDef.user_is_on_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on login page</div>
+
+
+		</li>
+		<li test-id='181' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.LoginPageStepDef.admin_should_user_and_password_in_the_text_field_and_symbol(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin should user and password in the text field and "asterik" symbol</div>
+
+
+		</li>
+		<li test-id='182' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.LoginPageStepDef.admin_should_see_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see login button</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='184' status='fail'>
+
+	<span class='duration right label'>00 00 14.899</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verify logo is present</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@LMSModule</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='186' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.LoginPageStepDef.user_is_on_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on login page</div>
+
+
+		</li>
+		<li test-id='187' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinition.LoginPageStepDef.admin_should_see_logo_on_the_leftside_and_admin_should_see_lms_learning_management_system_with_company_name_below())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Admin should see logo on the leftside and Admin should see  LMS - Learning Management System with company name below</div>
+
+
+					<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[center]> but was:<[top left]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pageObject.LoginPage.LMS_TitleAlignmentlp(LoginPage.java:160)
+	at stepDefinition.LoginPageStepDef.admin_should_see_logo_on_the_leftside_and_admin_should_see_lms_learning_management_system_with_company_name_below(LoginPageStepDef.java:77)
+	at ✽.Admin should see logo on the leftside and Admin should see  LMS - Learning Management System with company name below(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/LoginPage.feature:27)
+</textarea>
+		</li>
+		<li test-id='188' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepDefinition.LoginPageStepDef.admin_should_see(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Admin should see "Please login to LMS application"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='190' status='pass'>
+
+	<span class='duration right label'>00 00 10.947</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify elements in login screen</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@LMSModule</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='192' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.LoginPageStepDef.user_is_on_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on login page</div>
+
+
+		</li>
+		<li test-id='193' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.LoginPageStepDef.admin_should_see_user_and_password_in_gray_color())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see user and Password in gray color</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='195'>
+					<div class='test-heading'>
+						<span class='test-name'>Manage program Validation</span>
+						<span class='test-time'>May 2, 2024 12:57:28 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='196' status='pass'>
+
+	<span class='duration right label'>00 00 22.262</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate header,footer,pagination and default state of delete button in the Program page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='198' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</div>
+
+
+		</li>
+		<li test-id='199' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</div>
+
+
+		</li>
+		<li test-id='200' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.click_program())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</div>
+
+
+		</li>
+		<li test-id='201' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_should_see_in_the_header_and_the_total_number_of_records_in_the_footer(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see 'Manage Program' in the header and the total number of records in the footer in Program</div>
+
+
+		</li>
+		<li test-id='202' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_should_see_pagination_controls_under_the_data_table())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin should see pagination controls under the data table in Program</div>
+
+
+		</li>
+		<li test-id='203' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.the_delete_button_should_be_disabled())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the delete button should be disabled in Program</div>
+
+
+		</li>
+		<li test-id='204' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.the_edit_and_delete_icons_for_each_row_should_be_enabled())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the edit and delete icons for each row should be enabled in Program</div>
+
+
+		</li>
+		<li test-id='205' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.the_sorticon_check_box_and_searchbox_should_be_validated())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the sorticon check box and searchbox should be validated</div>
+
+
+		</li>
+		<li test-id='206' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.add_new_program())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Add New program</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='208' status='pass'>
+
+	<span class='duration right label'>00 02 52.514</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Data Table</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>program_name</td><td>program_descrp</td></tr><tr><td></td><td></td></tr><tr><td>Team19 Selen SurfS</td><td>Future Course</td></tr><tr><td>Team19Selen SUPERSTAR</td><td>Future Study</td></tr><tr><td>Team19Selen StarS</td><td>Happy Learning</td></tr><tr><td>12qw</td><td>qwerty</td></tr><tr><td>Team19</td><td>12qwewe</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='209' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Data Table</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='211' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</h6>
+
+				</li>
+				<li test-id='212' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</h6>
+
+				</li>
+				<li test-id='213' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.click_program()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</h6>
+
+				</li>
+				<li test-id='214' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admins_clicks_on_the_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admins clicks on the addprogram</h6>
+
+				</li>
+				<li test-id='215' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.enter_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter "" and ""</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='217' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Data Table</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='219' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</h6>
+
+				</li>
+				<li test-id='220' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</h6>
+
+				</li>
+				<li test-id='221' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.click_program()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</h6>
+
+				</li>
+				<li test-id='222' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admins_clicks_on_the_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admins clicks on the addprogram</h6>
+
+				</li>
+				<li test-id='223' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.enter_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter "Team19 Selen SurfS" and "Future Course"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='225' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Data Table</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='227' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</h6>
+
+				</li>
+				<li test-id='228' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</h6>
+
+				</li>
+				<li test-id='229' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.click_program()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</h6>
+
+				</li>
+				<li test-id='230' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admins_clicks_on_the_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admins clicks on the addprogram</h6>
+
+				</li>
+				<li test-id='231' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.enter_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter "Team19Selen SUPERSTAR" and "Future Study"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='233' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Data Table</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='235' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</h6>
+
+				</li>
+				<li test-id='236' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</h6>
+
+				</li>
+				<li test-id='237' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.click_program()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</h6>
+
+				</li>
+				<li test-id='238' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admins_clicks_on_the_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admins clicks on the addprogram</h6>
+
+				</li>
+				<li test-id='239' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.enter_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter "Team19Selen StarS" and "Happy Learning"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='241' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Data Table</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='243' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</h6>
+
+				</li>
+				<li test-id='244' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</h6>
+
+				</li>
+				<li test-id='245' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.click_program()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</h6>
+
+				</li>
+				<li test-id='246' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admins_clicks_on_the_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admins clicks on the addprogram</h6>
+
+				</li>
+				<li test-id='247' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.enter_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter "12qw" and "qwerty"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='249' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Data Table</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='251' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</h6>
+
+				</li>
+				<li test-id='252' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</h6>
+
+				</li>
+				<li test-id='253' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.click_program()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</h6>
+
+				</li>
+				<li test-id='254' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.admins_clicks_on_the_login()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admins clicks on the addprogram</h6>
+
+				</li>
+				<li test-id='255' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinition.ProgramPageSteps.enter_and(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter "Team19" and "12qwewe"</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='257' status='pass'>
+
+	<span class='duration right label'>00 00 27.630</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validating Edit functionality</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='259' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</div>
+
+
+		</li>
+		<li test-id='260' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</div>
+
+
+		</li>
+		<li test-id='261' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.click_program())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</div>
+
+
+		</li>
+		<li test-id='262' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_is_in_program_pae())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is in Program Page</div>
+
+
+		</li>
+		<li test-id='263' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_clicks_edit_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks Edit button</div>
+
+
+		</li>
+		<li test-id='264' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_updates_with_data())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin updates with data</div>
+
+
+		</li>
+		<li test-id='265' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_should_see_updated_message())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see Updated message.</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='267' status='fail'>
+
+	<span class='duration right label'>00 00 25.501</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validating Delete Functionality row level delete and alert options</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='269' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</div>
+
+
+		</li>
+		<li test-id='270' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</div>
+
+
+		</li>
+		<li test-id='271' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.click_program())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</div>
+
+
+		</li>
+		<li test-id='272' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_clicks_the_delete_icon_on_a_specific_program_row_alert_with_and_appears_clicks_yes_for_deletion(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks the delete icon on a specific program row alert with 'yes' and 'no' appears clicks yes for deletion</div>
+
+
+		</li>
+		<li test-id='273' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.success_message_apears())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then success message apears in Program</div>
+
+
+		</li>
+		<li test-id='274' class='node when Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_clicks_the_delete_icon_on_specific_program_row_alert_with_yes_and_no_appears_clicks(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Admin clicks the delete icon on specific program row alert with yes and no appears clicks "No"</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="mat-button-wrapper">...</span> is not clickable at point (1174, 31). Other element would receive the click: <div role="alert" aria-live="assertive" aria-atomic="true" class="p-toast-message-content ng-tns-c90-5">...</div>
+  (Session info: chrome=124.0.6367.118)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d049a4e94b132a470df2f4af4e4419d, clickElement {id=f.6E54FB6781CD7F6259A8D23C445AF715.d.69E84E4C969F5B5508855930A8103B1F.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/g0/62b0kvjj04b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51677}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51677/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (8d049a4e94b132a470df2f4af4e4419d)] -> xpath: //*[@id="program"]/span[1]]
+Session ID: 8d049a4e94b132a470df2f4af4e4419d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at pageObject.ProgramPage.navigateToProgramPage(ProgramPage.java:96)
+	at stepDefinition.ProgramPageSteps.admin_clicks_the_delete_icon_on_specific_program_row_alert_with_yes_and_no_appears_clicks(ProgramPageSteps.java:147)
+	at ✽.Admin clicks the delete icon on specific program row alert with yes and no appears clicks "No"(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/ProgramPage.feature:38)
+</textarea>
+		</li>
+		<li test-id='275' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.program_should_still_be_listed_in_the_data_table())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then program should still be listed in the data table</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='277' status='pass'>
+
+	<span class='duration right label'>00 00 24.784</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate the delete functionality with multiple selections</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='279' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</div>
+
+
+		</li>
+		<li test-id='280' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</div>
+
+
+		</li>
+		<li test-id='281' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.click_program())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</div>
+
+
+		</li>
+		<li test-id='282' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_selects_one_program8_row_and_clicks_the_delete_icon_under_the_header(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin selects one program row and clicks the delete icon under the "Manage Program" header</div>
+
+
+		</li>
+		<li test-id='283' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.selected_program_row_is_deleted_from_the_data_table())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then selected program row is deleted from the data table</div>
+
+
+		</li>
+		<li test-id='284' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_selects_multiple_program_rows_and_clicks_the_delete_icon_under_the_header(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin selects multiple program rows and clicks the delete icon under the "Manage Program" header</div>
+
+
+		</li>
+		<li test-id='285' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.selected_program_rows_are_deleted_from_the_data_table())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then selected program rows are deleted from the data table</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='287' status='pass'>
+
+	<span class='duration right label'>00 00 26.798</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: sorting prgName progDescriptio Status</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='289' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_is_logged_into_the_lms_portal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is logged into the LMS portal</div>
+
+
+		</li>
+		<li test-id='290' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_navigates_to_the_program_page_giving_and(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin navigates to the Program page giving 'username' and 'password'</div>
+
+
+		</li>
+		<li test-id='291' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.click_program())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then click Program</div>
+
+
+		</li>
+		<li test-id='292' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_is_in_program_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin is in program page</div>
+
+
+		</li>
+		<li test-id='293' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_clicks_prog_name_header())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks ProgName header</div>
+
+
+		</li>
+		<li test-id='294' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_clicks_prog_description_header())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks ProgDescription header</div>
+
+
+		</li>
+		<li test-id='295' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.ProgramPageSteps.admin_clicks_status())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks Status</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='297'>
+					<div class='test-heading'>
+						<span class='test-name'>User Page validation</span>
+						<span class='test-time'>May 2, 2024 01:02:27 AM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='298' status='pass'>
+
+	<span class='duration right label'>00 00 25.826</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate header, footer, pagination, and default state of delete button in the User Page</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@UserModule</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='300' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.logged_on_the_lms_portal_as_admin())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Logged on the LMS portal as admin</div>
+
+
+		</li>
+		<li test-id='301' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_is_on_dashboard_page_after_login())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin is on dashboard page after Login</div>
+
+
+		</li>
+		<li test-id='302' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_clicks_user_button_from_navigation_bar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin clicks User button from navigation bar</div>
+
+
+		</li>
+		<li test-id='303' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_should_see_in_the_header_and_the_total_number_of_records_in_the_footer(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should see 'Manage User' in the header and the total number of records in the footer</div>
+
+
+		</li>
+		<li test-id='304' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_should_see_pagination_controls_under_the_data_table())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin should see pagination controls under the data table</div>
+
+
+		</li>
+		<li test-id='305' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.the_delete_button_should_be_disabled())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the delete button should be disabled</div>
+
+
+		</li>
+		<li test-id='306' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.the_edit_and_delete_icons_for_each_row_should_be_enabled())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the edit and delete icons for each row should be enabled</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='308' status='pass'>
+
+	<span class='duration right label'>00 00 25.771</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate data table Elements in the User Page</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@UserModule</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='310' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.logged_on_the_lms_portal_as_admin())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Logged on the LMS portal as admin</div>
+
+
+		</li>
+		<li test-id='311' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_is_on_dashboard_page_after_login())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin is on dashboard page after Login</div>
+
+
+		</li>
+		<li test-id='312' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_clicks_user_button_from_navigation_bar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin clicks User button from navigation bar</div>
+
+
+		</li>
+		<li test-id='313' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_should_see_the_data_table_with_headers_id_name_location_phone_number_edit_delete())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin Should see the data table with headers Id, Name, location, Phone Number, Edit/Delete</div>
+
+
+		</li>
+		<li test-id='314' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_should_be_able_to_see_the_a_new_user_assign_student_assign_staff_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Admin should be able to see the + A New User , + Assign Student , + Assign Staff button</div>
+
+
+		</li>
+		<li test-id='315' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.each_row_in_the_data_table_should_have_a_checkbox())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Each row in the data table should have a checkbox</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='317' status='fail'>
+
+	<span class='duration right label'>00 00 24.319</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validate Search Field in the User Page</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@UserModule</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='319' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.logged_on_the_lms_portal_as_admin())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Logged on the LMS portal as admin</div>
+
+
+		</li>
+		<li test-id='320' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_is_on_dashboard_page_after_login())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin is on dashboard page after Login</div>
+
+
+		</li>
+		<li test-id='321' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_clicks_user_button_from_navigation_bar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin clicks User button from navigation bar</div>
+
+
+		</li>
+		<li test-id='322' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_should_be_able_to_see_the_search_text_box_above_the_data_table())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin should be able to see the search text box above the data table</div>
+
+
+		</li>
+		<li test-id='323' class='node and Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_should_see_user_displayed_with_the_entered_name())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And Admin should see user displayed with the entered name</div>
+
+
+					<textarea disabled class="code-block">org.junit.ComparisonFailure: Search Match expected:<Selenium Sur[efers testing]> but was:<Selenium Sur[fers]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at pageObject.UserManagePage.searchtxtdisplayed(UserManagePage.java:274)
+	at stepDefinition.UserManageStepDef.admin_should_see_user_displayed_with_the_entered_name(UserManageStepDef.java:137)
+	at ✽.Admin should see user displayed with the entered name(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/UserPageValidation.feature:23)
+</textarea>
+		</li>
+		<li test-id='324' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_enter_keyword_not_present_zero_enteries_must_be_displayed())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Admin enter keyword not present zero enteries must be displayed</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='326' status='pass'>
+
+	<span class='duration right label'>00 00 30.194</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate popup on New User Window</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@UserModule</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='328' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.logged_on_the_lms_portal_as_admin())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Logged on the LMS portal as admin</div>
+
+
+		</li>
+		<li test-id='329' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_is_on_dashboard_page_after_login())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin is on dashboard page after Login</div>
+
+
+		</li>
+		<li test-id='330' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_clicks_user_button_from_navigation_bar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin clicks User button from navigation bar</div>
+
+
+		</li>
+		<li test-id='331' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_click_a_new_user_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin click +A New User button</div>
+
+
+		</li>
+		<li test-id='332' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.new_pop_up_with_user_details_appears())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When New pop up with user details appears</div>
+
+
+		</li>
+		<li test-id='333' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.check_all_the_fields_in_the_pop_up_page_with_user_details())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then check all the fields in the pop up page with user details</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='335' status='fail'>
+
+	<span class='duration right label'>00 00 45.411</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Validate Fields without entering data in User page</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@UserModule</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='337' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.logged_on_the_lms_portal_as_admin())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Logged on the LMS portal as admin</div>
+
+
+		</li>
+		<li test-id='338' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_is_on_dashboard_page_after_login())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin is on dashboard page after Login</div>
+
+
+		</li>
+		<li test-id='339' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_clicks_user_button_from_navigation_bar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Admin clicks User button from navigation bar</div>
+
+
+		</li>
+		<li test-id='340' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_click_a_new_user_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Admin click +A New User button</div>
+
+
+		</li>
+		<li test-id='341' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.admin_clicks_on_submit_button_without_entering_data())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Admin clicks on submit button without entering data</div>
+
+
+		</li>
+		<li test-id='342' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinition.UserManageStepDef.user_willnot_be_created_and_admin_gets_error_message())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then user willnot be created and Admin gets error message</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//mat-error[text()='User Comments is ']"}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2c7eefb9bacd392bcdad2a5a630c1c7c, findElement {using=xpath, value=//mat-error[text()='User Comments is ']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/g0/62b0kvjj04b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51884}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51884/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c7eefb9bacd392bcdad2a5a630c1c7c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.getText(Unknown Source)
+	at pageObject.UserManagePage.usrcmtsfielderror(UserManagePage.java:478)
+	at stepDefinition.UserManageStepDef.user_willnot_be_created_and_admin_gets_error_message(UserManageStepDef.java:239)
+	at ✽.user willnot be created and Admin gets error message(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/UserPageValidation.feature:34)
+</textarea>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@LMSModule</span>
+						<span class='category-status right'>
+						<span class='label pass'>6</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 6</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:55:47 AM</td>
+										<td class='linked' test-id='154'>Validating Login process for User with valid data</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:56:04 AM</td>
+										<td class='linked' test-id='160'>Validating Login process for User with valid data</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:56:18 AM</td>
+										<td class='linked' test-id='166'>Validating Login process for User with valid data</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:56:33 AM</td>
+										<td class='linked' test-id='172'>Validating Login process for User with valid data</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:56:48 AM</td>
+										<td class='linked' test-id='178'>Verify text field is present</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:57:02 AM</td>
+										<td class='linked' test-id='184'>Verify logo is present</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:57:17 AM</td>
+										<td class='linked' test-id='190'>Verify elements in login screen</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag6</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:55:07 AM</td>
+										<td class='linked' test-id='138'>Verify the response time</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@UserModule</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 01:02:27 AM</td>
+										<td class='linked' test-id='298'>Validate header, footer, pagination, and default state of delete button in the User Page</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 01:02:53 AM</td>
+										<td class='linked' test-id='308'>Validate data table Elements in the User Page</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 01:03:19 AM</td>
+										<td class='linked' test-id='317'>Validate Search Field in the User Page</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 01:03:43 AM</td>
+										<td class='linked' test-id='326'>Validate popup on New User Window</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 01:04:14 AM</td>
+										<td class='linked' test-id='335'>Validate Fields without entering data in User page</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag3</span>
+						<span class='category-status right'>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:51:20 AM</td>
+										<td class='linked' test-id='75'>Validate row-level editicon</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:54:10 AM</td>
+										<td class='linked' test-id='115'>Verify  LMS title alignment</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag1</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:46:55 AM</td>
+										<td class='linked' test-id='2'>Validate header,data table header, footer, pagination, and default state of delete button in the Batch Page</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:53:31 AM</td>
+										<td class='linked' test-id='103'>Verify after login  admin lands on manage program as dashboard page</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag4</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:52:05 AM</td>
+										<td class='linked' test-id='84'>Validate row-level delete and alert options</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:54:30 AM</td>
+										<td class='linked' test-id='121'>Validate navigation bar by order</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag2</span>
+						<span class='category-status right'>
+						<span class='label pass'>8</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 8</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:47:20 AM</td>
+										<td class='linked' test-id='12'>Comprehensive validation and submission of the new batch form in the popup</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:47:54 AM</td>
+										<td class='linked' test-id='21'>Comprehensive validation and submission of the new batch form in the popup</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:48:29 AM</td>
+										<td class='linked' test-id='30'>Comprehensive validation and submission of the new batch form in the popup</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:49:00 AM</td>
+										<td class='linked' test-id='39'>Comprehensive validation and submission of the new batch form in the popup</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:49:34 AM</td>
+										<td class='linked' test-id='48'>Comprehensive validation and submission of the new batch form in the popup</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:50:09 AM</td>
+										<td class='linked' test-id='57'>Comprehensive validation and submission of the new batch form in the popup</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:50:44 AM</td>
+										<td class='linked' test-id='66'>Comprehensive validation and submission of the new batch form in the popup</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:53:51 AM</td>
+										<td class='linked' test-id='109'>Verify LMS title</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag5</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:52:43 AM</td>
+										<td class='linked' test-id='93'>Validate the delete functionality with multiple selections</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:54:47 AM</td>
+										<td class='linked' test-id='130'>Validate navigation bar text and allignment</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag7</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:55:27 AM</td>
+										<td class='linked' test-id='145'>Verify Logout button function</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.ElementClickInterceptedException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 01:01:34 AM</td>
+										<td class='linked' test-id='274'>When Admin clicks the delete icon on specific program row alert with yes and no appears clicks "No"</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="mat-button-wrapper">...</span> is not clickable at point (1174, 31). Other element would receive the click: <div role="alert" aria-live="assertive" aria-atomic="true" class="p-toast-message-content ng-tns-c90-5">...</div>
+  (Session info: chrome=124.0.6367.118)
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d049a4e94b132a470df2f4af4e4419d, clickElement {id=f.6E54FB6781CD7F6259A8D23C445AF715.d.69E84E4C969F5B5508855930A8103B1F.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/g0/62b0kvjj04b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51677}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51677/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (8d049a4e94b132a470df2f4af4e4419d)] -> xpath: //*[@id="program"]/span[1]]
+Session ID: 8d049a4e94b132a470df2f4af4e4419d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at pageObject.ProgramPage.navigateToProgramPage(ProgramPage.java:96)
+	at stepDefinition.ProgramPageSteps.admin_clicks_the_delete_icon_on_specific_program_row_alert_with_yes_and_no_appears_clicks(ProgramPageSteps.java:147)
+	at ✽.Admin clicks the delete icon on specific program row alert with yes and no appears clicks "No"(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/ProgramPage.feature:38)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:51:52 AM</td>
+										<td class='linked' test-id='81'>When Admin erase the mandatory field  error message appear</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="text-danger"]"}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c2151dec251fa95d28874c411c4b66ca, findElement {using=xpath, value=//*[@id="text-danger"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/g0/62b0kvjj04b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50945/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2151dec251fa95d28874c411c4b66ca
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at pageObject.BatchPage.noofclasseserror(BatchPage.java:439)
+	at pageObject.BatchPage.clearMandatoryField(BatchPage.java:651)
+	at stepDefinition.BatchSteps.admin_erase_the_mandatory_field_error_message_appear(BatchSteps.java:186)
+	at ✽.Admin erase the mandatory field  error message appear(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/BatchPage.feature:34)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 01:04:48 AM</td>
+										<td class='linked' test-id='342'>Then user willnot be created and Admin gets error message</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="text-danger"]"}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.3.1', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c2151dec251fa95d28874c411c4b66ca, findElement {using=xpath, value=//*[@id="text-danger"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: /var/folders/g0/62b0kvjj04b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50945/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2151dec251fa95d28874c411c4b66ca
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at pageObject.BatchPage.noofclasseserror(BatchPage.java:439)
+	at pageObject.BatchPage.clearMandatoryField(BatchPage.java:651)
+	at stepDefinition.BatchSteps.admin_erase_the_mandatory_field_error_message_appear(BatchSteps.java:186)
+	at ✽.Admin erase the mandatory field  error message appear(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/BatchPage.feature:34)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.junit.ComparisonFailure</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:57:15 AM</td>
+										<td class='linked' test-id='187'>Then Admin should see logo on the leftside and Admin should see  LMS - Learning Management System with company name below</td>
+										<td>
+											<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[center]> but was:<[top left]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pageObject.LoginPage.LMS_TitleAlignmentlp(LoginPage.java:160)
+	at stepDefinition.LoginPageStepDef.admin_should_see_logo_on_the_leftside_and_admin_should_see_lms_learning_management_system_with_company_name_below(LoginPageStepDef.java:77)
+	at ✽.Admin should see logo on the leftside and Admin should see  LMS - Learning Management System with company name below(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/LoginPage.feature:27)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 01:03:41 AM</td>
+										<td class='linked' test-id='323'>And Admin should see user displayed with the entered name</td>
+										<td>
+											<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[center]> but was:<[top left]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pageObject.LoginPage.LMS_TitleAlignmentlp(LoginPage.java:160)
+	at stepDefinition.LoginPageStepDef.admin_should_see_logo_on_the_leftside_and_admin_should_see_lms_learning_management_system_with_company_name_below(LoginPageStepDef.java:77)
+	at ✽.Admin should see logo on the leftside and Admin should see  LMS - Learning Management System with company name below(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/LoginPage.feature:27)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 2, 2024 12:54:26 AM</td>
+										<td class='linked' test-id='119'>Then LMS title should be on the top left corner of page</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [top left] but found [start]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at pageObject.DashboardPageObj.LMS_TitleAlignment(DashboardPageObj.java:87)
+	at stepDefinition.DashboardStepDef.lms_title_should_be_on_the_top_left_corner_of_page(DashboardStepDef.java:67)
+	at ✽.LMS title should be on the top left corner of page(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/Dashboard.feature:21)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>May 2, 2024 12:55:07 AM</td>
+										<td class='linked' test-id='136'>And Admin should see the navigation bar text on the top right side</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [top left] but found [start]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at pageObject.DashboardPageObj.LMS_TitleAlignment(DashboardPageObj.java:87)
+	at stepDefinition.DashboardStepDef.lms_title_should_be_on_the_top_left_corner_of_page(DashboardStepDef.java:67)
+	at ✽.LMS title should be on the top left corner of page(file:///Users/ark/eclipse-workspace/Team19_SeleniumSurfers_LMSHackathon/src/test/resources/features/Dashboard.feature:21)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>5</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>41</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>212</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 2, 2024 12:46:54 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 2, 2024 01:04:59 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 18 04.645</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Browser</td>
+								<td>GoogleChrome</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@LMSModule</td>
+							<td>6</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									85.714%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag6</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@UserModule</td>
+							<td>3</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									60%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag3</td>
+							<td>0</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag1</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag4</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag2</td>
+							<td>8</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag5</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag7</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 5,
+				passParent: 0,
+				failParent: 5,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 41,
+				passChild: 34,
+				failChild: 7,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 212,
+				passGrandChild: 201,
+				failGrandChild: 7,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 4,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Batch Management":396.484,"Dashboard Page":135.319,"Login page validation":101.192,"Manage program Validation":299.567,"User Page validation":151.595
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>
