@@ -138,11 +138,11 @@
     <version>2.0.12</version>
 </dependency>
 
-<dependency>
+<!-- <dependency>
 <groupId>tech.grasshopper</groupId>
 <artifactId>extentreports-cucumber7-adapter</artifactId>
 <version>1.13.0</version>
-</dependency>
+</dependency> -->
 
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
 <dependency>
